@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:MyFirstWPFApplication"
         mc:Ignorable="d"
         Title="MainWindow" Height="867.328" Width="1279.311">
-    <Grid Margin="-231,-57,0.5,0">
-
-    </Grid>
+    <Button Content="Button" HorizontalAlignment="Left" Margin="490,476,0,0" VerticalAlignment="Top" Width="345" Height="134" Click="Button_Click_1" RenderTransformOrigin="-0.537,1.719" FontSize="72" FontFamily="Showcard Gothic" FontWeight="Bold"/>
 </Window>

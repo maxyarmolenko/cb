@@ -20,10 +20,7 @@ namespace MyFirstWFApplication
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox2.Text;
-            
-            
-
+            textBox2.Text = textBox1.Text;
         }
 
         private void TextBox2_TextChanged(object sender, EventArgs e)
@@ -31,9 +28,14 @@ namespace MyFirstWFApplication
 
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox1_TextChanged_2(object sender, EventArgs e)
         {
             
+        }
+
+        private void TextBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

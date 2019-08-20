@@ -5,11 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyFirstWFApplication
+namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
@@ -20,20 +19,8 @@ namespace MyFirstWFApplication
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox2.Text;
-            
-            
+            MessageBox.Show("сюда можно вписать текст");
 
-        }
-
-        private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

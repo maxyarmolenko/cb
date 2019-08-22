@@ -7,26 +7,21 @@ namespace VariablesAndDataTypes
         static void Main(string[] args)
         {
             byte a = 4, b = 5;
-            int sum = 0;
-            sum = a + b;
+            int sum = a +b;
             Console.WriteLine(sum);
 
             byte c = 5, d = 10;
-            int difference = 0;
-            difference = d - c;
+            int difference = d - c;
             Console.WriteLine(difference);
 
             byte e = 3, f = 12;
-            int multiplication = 0;
-            multiplication = d * c;
+            int multiplication = d * c;
             Console.WriteLine(multiplication);
 
             byte g = 2, h = 9;
-            int division = 0, remainder = 0;
-            division = h / g;
+            int division = h / g, remainder = h % g;
             Console.WriteLine(division);
 
-            remainder = h % g;
             Console.WriteLine(remainder);
 
             double i = 3, j = 4;

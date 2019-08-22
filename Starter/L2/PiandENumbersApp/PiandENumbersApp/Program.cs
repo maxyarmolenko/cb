@@ -4,7 +4,7 @@ namespace PiandENumbersApp
 {
     class Program
     {
-        private static int Main(string[] args)
+        static void Main(string[] args)
         {
             double pi = 3.141592653d;
             Console.WriteLine(pi);

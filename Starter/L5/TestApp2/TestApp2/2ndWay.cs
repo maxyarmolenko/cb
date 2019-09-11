@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestApp2_1stWayOfSolution
+namespace ParityApp
 {
     class Program
     {
@@ -10,12 +10,25 @@ namespace TestApp2_1stWayOfSolution
             string line = Console.ReadLine();
             byte number;
             byte.TryParse(line, out number);
-            byte mask = 0x00;
-            number = (byte) (number | mask);
-            number = (byte)(number & mask);
-            Console.WriteLine("Число является четным");
+            bool check = CheckEven(number);
+            if (check)
+            {
+                Console.WriteLine("Число является четным");
+            }
+            else 
             Console.WriteLine("Число является нечетным");
             Console.ReadKey();
         }
+
+        private static bool CheckEven(byte number)
+        {
+            if (number % 2 == 0)
+            {
+                return true;
+            }
+            
+            return false;
+        }
+        
     }
 }

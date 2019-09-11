@@ -1,4 +1,4 @@
-﻿namespace TestApp2
+﻿namespace TestApp2_2ndWayOfSolution
 {
     class Program
     {

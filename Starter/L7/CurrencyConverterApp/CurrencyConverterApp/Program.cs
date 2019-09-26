@@ -3,7 +3,7 @@ namespace CurrencyConverterApp
 {
     class Program
     {
-        static void CurrencyConverterMethod(ref double quantity, ref double exchangeRates, out double result)
+        static void CurrencyConverterMethod(double quantity, double exchangeRates, double result)
         {
             result = quantity * exchangeRates;
             Console.WriteLine("Amount of money in the chosen currency = {0}", result);
@@ -18,7 +18,7 @@ namespace CurrencyConverterApp
             string operand2 = Console.ReadLine();
             double exchangeRates = Double.Parse(operand2);
             double result = 0;
-            CurrencyConverterMethod(ref quantity, ref exchangeRates, out result);
+            CurrencyConverterMethod(quantity,  exchangeRates, result);
         }
     }
 }

@@ -33,23 +33,23 @@ namespace ArithmeticOperationsMethodsApp
             {
                Console.WriteLine("Attempt to divide by 0");    
             }
-            result = a / b;
+            else
             {
+             result = a / b;
              Console.WriteLine("{0} / {1} = {2}", a, b, result);
             }
-            Console.ReadKey();
+            Console.ReadKey(); 
         }
-
         static void Main(string[] args)
         {
            
-            Console.WriteLine("Please enter the 1st number");
+            Console.Write("Please enter the 1st number - ");
             string operand1 = Console.ReadLine();
             int number1 = Int32.Parse(operand1);
-            Console.WriteLine("Please enter the 2d number");
+            Console.Write("Please enter the 2d number - ");
             string operand2 = Console.ReadLine();
             int number2 = Int32.Parse(operand2);
-            Console.WriteLine("Please enter arithmetic sign");
+            Console.Write("Please enter arithmetic sign - ");
             string operand3 = Console.ReadLine();
             Char number3 = Char.Parse(operand3);
             if (number3 == '+')

@@ -3,7 +3,7 @@ namespace CalculateMethodApp
 {
     class Program
     {
-        static void Calculate(ref int number1, ref int number2, ref int number3)
+        static void Calculate(int number1, int number2, int number3)
         {
           number1 = number1 / 5;
           number2 = number2 / 5;
@@ -20,7 +20,7 @@ namespace CalculateMethodApp
             Console.WriteLine("Please enter 3rd integer value");
             int val3;
             int.TryParse(Console.ReadLine(), out val3);
-            Calculate(ref val1, ref val2, ref val3);
+            Calculate(val1, val2, val3);
             Console.WriteLine("Divide by 5 for the 1st value = {0}", val1);
             Console.WriteLine("Divide by 5 for the 2nd value = {0}", val2);
             Console.WriteLine("Divide by 5 for the 3rd value = {0}", val3);

@@ -10,7 +10,7 @@ namespace CalculateMethodApp
             if (number1 % 5 == 0)
             {
                number1 = number1 / 5;
-               Console.WriteLine("Divide by 5 for the 1st value = {0}", number1);
+               Console.WriteLine($"Divide by 5 for the 1st value = {number1 / 5}", number1);
             }
             else
             {

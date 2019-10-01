@@ -3,28 +3,34 @@ namespace ReverseOrderApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Display array elements in order");
-            int [] array = new int [10];
-            for (int a = 0; a < array.Length; ++a)
+            int[] array = new int[10];
+            for (int a = 0; a < array.Length; a++)
             {
-                array[a] = a;
-                Console.WriteLine(array[a]);
+                array[a] = a * 1;
             }
-            array = ReverseArray (array);
-            Console.WriteLine(array);
-            
+          ReverseArray(array);
+          DisplayArray(array);
             Console.ReadKey();
         }
         static int[] ReverseArray(int[] array)
         {
-            Console.WriteLine("Display array elements in reverse order");
+
+            for (int k = array.Length-1; k >= 0; k--)
+            {
+                array[k] = k * 1;
+            }
+           
+            return array;
+        }
+        static void DisplayArray(int[] array)
+        {
             for (int i = array.Length - 1; i >= 0; i--)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(array[i]);
             }
-            return array;
+            Console.WriteLine();
         }
     }
 }

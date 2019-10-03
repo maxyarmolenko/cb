@@ -7,9 +7,11 @@ namespace ReverseOrderApp
         static void Main()
         {
             var array = NewArray(10);
+            Console.WriteLine("Display on the screen NewArray");
             Display(array);
             Console.WriteLine();
             var array1 = InvertArray(array);
+            Console.WriteLine("Display on the screen InvertArray");
             Display(array1);
         }
 
@@ -17,7 +19,7 @@ namespace ReverseOrderApp
         {
             var n = array.Length;
             var array1 = new int [n];
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 array1 [i] = array[n-1];
                 n--;
@@ -37,7 +39,7 @@ namespace ReverseOrderApp
         {
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine (array [i]);
             }
             Console.ReadKey();
         }

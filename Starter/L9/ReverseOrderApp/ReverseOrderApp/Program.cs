@@ -1,36 +1,46 @@
 ﻿using System;
+
 namespace ReverseOrderApp
 {
     class Program
     {
         static void Main()
         {
-            int[] array = new int[10];
-            for (int a = 0; a < array.Length; a++)
-            {
-                array[a] = a * 1;
-            }
-          ReverseArray(array);
-          DisplayArray(array);
-            Console.ReadKey();
+            var array = NewArray(10);
+            Display(array);
+            Console.WriteLine();
+            var array1 = InvertArray(array);
+            Display(array1);
         }
-        static int[] ReverseArray(int[] array)
-        {
 
-            for (int k = array.Length-1; k >= 0; k--)
+        static int [] InvertArray(int[] array)
+        {
+            var n = array.Length;
+            var array1 = new int [n];
+            for (int i = 0; i < n; i++)
             {
-                array[k] = k * 1;
+                array1 [i] = array[n-1];
+                n--;
             }
-           
+            return array1;
+        }
+         static int [] NewArray(int v)
+        {
+            var array = new int [v];
+            for (int i = 0; i < v; i++)
+            {
+                array[i] = i;
+            }
             return array;
         }
-        static void DisplayArray(int[] array)
+         static void Display(int[] array)
         {
-            for (int i = array.Length - 1; i >= 0; i--)
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(array[i]);
+                Console.WriteLine(i);
             }
-            Console.WriteLine();
+            Console.ReadKey();
         }
     }
 }
+

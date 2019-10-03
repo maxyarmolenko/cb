@@ -18,14 +18,16 @@ namespace ReverseOrderApp
         static int [] InvertArray(int[] array)
         {
             var n = array.Length;
-            var array1 = new int [n];
+            var invertArray = new int [n];
             for (int i = 0; i < array.Length; i++)
             {
-                array1 [i] = array[n-1];
+                invertArray [i] = array[n-1];
                 n--;
             }
-            return array1;
+
+            return invertArray;
         }
+
          static int [] CreateAndInitArray(int v)
         {
             var array = new int [v];
@@ -33,16 +35,20 @@ namespace ReverseOrderApp
             {
                 array[i] = i;
             }
+
             return array;
         }
+
          static void Display(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
                 Console.WriteLine (array [i]);
             }
+
             Console.ReadKey();
         }
+
     }
 }
 

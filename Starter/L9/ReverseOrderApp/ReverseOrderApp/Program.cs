@@ -6,8 +6,8 @@ namespace ReverseOrderApp
     {
         static void Main()
         {
-            var array = NewArray(10);
-            Console.WriteLine("Display on the screen NewArray");
+            var array = CreateAndInitArray(10);
+            Console.WriteLine("Display on the screen CreateAndInitArray");
             Display(array);
             Console.WriteLine();
             var array1 = InvertArray(array);
@@ -26,7 +26,7 @@ namespace ReverseOrderApp
             }
             return array1;
         }
-         static int [] NewArray(int v)
+         static int [] CreateAndInitArray(int v)
         {
             var array = new int [v];
             for (int i = 0; i < v; i++)

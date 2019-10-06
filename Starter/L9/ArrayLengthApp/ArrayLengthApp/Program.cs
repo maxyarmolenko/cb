@@ -8,8 +8,14 @@ namespace ArrayLengthApp
             var array = GetArray(10);
             DisplayArray(array);
             Console.WriteLine();
+
             var inc = IncreaseArrayLength(array);
             DisplayArray(inc);
+            Console.WriteLine();
+
+            int a = 5;
+            var oper = LengthOperations(array, a);
+            DisplayArray(oper);
             Console.ReadKey();
         }
 
@@ -44,6 +50,19 @@ namespace ArrayLengthApp
               
             }
 
+        }
+
+        private static int[] LengthOperations(int[] array, int value)
+        {
+            var a = array.Length + 1;
+            var valueArray = new int[a];
+            valueArray[0] = value;
+            for (int i = 1; i < a; i++)
+            {
+                valueArray[i] = i-1;
+            }
+
+            return valueArray;
         }
     }
 }

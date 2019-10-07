@@ -30,8 +30,8 @@ namespace HerringboneApp
             }
 
             {
-                int height1 = 7;
-                int width1 = 5;
+                int height1 = 8;
+                int width1 = 4;
                 for (int i = -2; i < 7; ++i)
                 {
                     for (int o = 0; o < 10; ++o)
@@ -53,8 +53,8 @@ namespace HerringboneApp
                 }
 
                 {
-                    int height2 = 7;
-                    int width2 = 5;
+                    int height2 = 9;
+                    int width2 = 3;
                     for (int i = -4; i < 7; ++i)
                     {
                         for (int o = 0; o < 10; ++o)
@@ -100,5 +100,3 @@ namespace HerringboneApp
     }
 
 }
-    
-

@@ -1,97 +1,107 @@
 ﻿using System;
+
 namespace AddressClassApp
 {
-    class Adress
+    class Address
     {
-        public int index;
-        public string country;
-        public string city;
-        public string street;
-        public int house;
-        public int apartment;
+        private int _index;
+        private string _country;
+        private string _city;
+        private string _street;
+        private int _house;
+        private int _apartment;
+
         public void SetIndex(int value) 
         {
-            index = value;
+            _index = value;
         }
 
-        public int GetIndex(int v)         
+        public int GetIndex()           
         {
-            return index;
+            return _index;
         }
 
-        public void SetCountry(string value)
+          public void SetCountry(string value) 
         {
-            country = value;
+            _country = value;
         }
 
-        public string GetCountry()
+        public string GetCountry()          
         {
-            return country;
+            return _country;
         }
+
         public void SetCity(string value)
         {
-            city = value;
+            _city = value;
         }
 
         public string GetCity()
         {
-            return city;
+            return _city;
         }
+
         public void SetStreet(string value)
         {
-            street = value;
+            _street = value;
         }
 
         public string GetStreet()
         {
-            return street;
-        }
-        public void SetHouse(int value) 
-        {
-            house = value;
+            return _street;
         }
 
-        public int GetHouse()           
+        public void SetHouse(int value)
         {
-            return house;
+            _house = value;
         }
 
-        public void SetApartment(int value) 
+        public int GetHouse()
         {
-            index = value;
+            return _house;
         }
 
-        public int GetApartment()           
+        public void SetApartment(int value)
         {
-            return apartment;
+            _apartment = value;
         }
-    }
-    
-    class Program
-    {
-        static void Main(string[] args)
+        public int GetApartment()
         {
-            Adress addr = new Adress();
+            return _apartment;
+        }
 
-            addr.index = 03190;
-            Console.WriteLine(addr.index);
+        class Program
+        {
+            static void Main()
+            {
+                Address address = new Address();
 
-            addr.country = "Ukraine";
-            Console.WriteLine(addr.country);
+                address.SetIndex(03190);
+                int index = address.GetIndex();
+                Console.WriteLine(index);
 
-            addr.city = "Kyiv";
-            Console.WriteLine(addr.city);
+                address.SetCountry("Ukraine");
+                string country = address.GetCountry();
+                Console.WriteLine(country);
 
-            addr.street = "Chernyahovskogo";
-            Console.WriteLine(addr.street);
+                address.SetCity("Kyiv");
+                string city = address.GetCity();
+                Console.WriteLine(city);
 
-            addr.house = 14;
-            Console.WriteLine(addr.house);
+                address.SetStreet("Chernyahovskogo");
+                string street = address.GetStreet();
+                Console.WriteLine(street);
 
-            addr.apartment = 54;
-            Console.WriteLine(addr.apartment);
+                address.SetHouse(24);
+                int house = address.GetHouse();
+                Console.WriteLine(house);
 
-            Console.ReadKey();
+                address.SetApartment(158);
+                int apartment = address.GetApartment();
+                Console.WriteLine(apartment);
+
+                Console.ReadKey();
+            }
         }
     }
 }

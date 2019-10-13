@@ -1,43 +1,37 @@
 ﻿using System;
 namespace RectangleClassApp
 {
-    class Rectangle
+    class Rectangle 
     {
-        public double side1;
-        public double side2;
-        
+        private double side1;
+        private double side2;
+
         public Rectangle(double side1, double side2)
         {
             this.side1 = side1;
             this.side2 = side2;
         }
-
         
-
         static double AreaCalculator(double side1, double side2)
         {
             double area = side1 * side2;
             return area;
         }
 
-       
         static double PerimeterCalculator(double side1, double side2)
         {
             double perimeter = (side1 + side2) * 2;
             return perimeter;
         }
 
-        double result1 = AreaCalculator(side1: , side2: );
-        double result2 = PerimeterCalculator(side1: , side2: );
-
         public double GetArea()
         {
-            return result1;
+            return AreaCalculator(side1, side2);
         }
 
         public double GetPerimeter()
         {
-            return result2;
+            return PerimeterCalculator(side1, side2);
         }
 
     }
@@ -56,10 +50,12 @@ namespace RectangleClassApp
 
             Rectangle sizes = new Rectangle(side1, side2);
             Console.WriteLine("side1 = {0}, side2 = {1}", side1, side2);
-
-            Console.WriteLine(sizes.GetArea());
-            Console.WriteLine(sizes.GetPerimeter());
+            
+            Console.WriteLine($"Rectangle area = {sizes.GetArea()}");
+            Console.WriteLine($"Rectangle perimeter = {sizes.GetPerimeter()}");
             Console.ReadKey();
         }
+
     }
+
 }

@@ -41,7 +41,7 @@ namespace RectangleClassApp
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter the length of the 1st side of the rectangle");
-             double side1;
+            double side1;
             double.TryParse(Console.ReadLine(), out side1);
 
             Console.WriteLine("Please enter the length of the 2nd side of the rectangle");

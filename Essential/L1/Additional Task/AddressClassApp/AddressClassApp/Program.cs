@@ -65,6 +65,7 @@ namespace AddressClassApp
         {
             _apartment = value;
         }
+
         public int GetApartment()
         {
             return _apartment;
@@ -74,30 +75,31 @@ namespace AddressClassApp
         {
             static void Main()
             {
-                Address address = new Address();
+                Address information = new Address();
 
-                address.SetIndex(03190);
-                int index = address.GetIndex();
-                Console.WriteLine(index);
+                information.SetIndex(03190);
+                information.SetCountry("Ukraine");
+                information.SetCity("Kyiv");
+                information.SetStreet("Chernyahovskogo");
+                information.SetHouse(24);
+                information.SetApartment(158);
 
-                address.SetCountry("Ukraine");
-                string country = address.GetCountry();
+                int index = information.GetIndex();
+                Console.WriteLine(index);  
+
+                string country = information.GetCountry();
                 Console.WriteLine(country);
 
-                address.SetCity("Kyiv");
-                string city = address.GetCity();
+                string city = information.GetCity();
                 Console.WriteLine(city);
 
-                address.SetStreet("Chernyahovskogo");
-                string street = address.GetStreet();
+                string street = information.GetStreet();
                 Console.WriteLine(street);
 
-                address.SetHouse(24);
-                int house = address.GetHouse();
+                int house = information.GetHouse();
                 Console.WriteLine(house);
 
-                address.SetApartment(158);
-                int apartment = address.GetApartment();
+                int apartment = information.GetApartment();
                 Console.WriteLine(apartment);
 
                 Console.ReadKey();

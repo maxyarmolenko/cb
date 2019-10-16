@@ -4,104 +4,37 @@ namespace AddressClassApp
 {
     class Address
     {
-        private int _index;
-        private string _country;
-        private string _city;
-        private string _street;
-        private int _house;
-        private int _apartment;
+        public int Index { set; get; }
 
-        public void SetIndex(int value) 
-        {
-            _index = value;
-        }
+        public string City { get; set; }
 
-        public int GetIndex()           
-        {
-            return _index;
-        }
+        public string Country { get; set; }
 
-          public void SetCountry(string value) 
-        {
-            _country = value;
-        }
+        public string Street { get; set; }
 
-        public string GetCountry()          
-        {
-            return _country;
-        }
+        public int House { set; get; }
 
-        public void SetCity(string value)
-        {
-            _city = value;
-        }
-
-        public string GetCity()
-        {
-            return _city;
-        }
-
-        public void SetStreet(string value)
-        {
-            _street = value;
-        }
-
-        public string GetStreet()
-        {
-            return _street;
-        }
-
-        public void SetHouse(int value)
-        {
-            _house = value;
-        }
-
-        public int GetHouse()
-        {
-            return _house;
-        }
-
-        public void SetApartment(int value)
-        {
-            _apartment = value;
-        }
-
-        public int GetApartment()
-        {
-            return _apartment;
-        }
+        public int Apartment { set; get; }
 
         class Program
         {
             static void Main()
             {
                 Address information = new Address();
-
-                information.SetIndex(03190);
-                information.SetCountry("Ukraine");
-                information.SetCity("Kyiv");
-                information.SetStreet("Chernyahovskogo");
-                information.SetHouse(24);
-                information.SetApartment(158);
-
-                int index = information.GetIndex();
-                Console.WriteLine(index);  
-
-                string country = information.GetCountry();
-                Console.WriteLine(country);
-
-                string city = information.GetCity();
-                Console.WriteLine(city);
-
-                string street = information.GetStreet();
-                Console.WriteLine(street);
-
-                int house = information.GetHouse();
-                Console.WriteLine(house);
-
-                int apartment = information.GetApartment();
-                Console.WriteLine(apartment);
-
+                {
+                   information.Index = 03190;
+                   information.City = "Kyiv";
+                   information.Country = "Ukraine";
+                   information.Street = "Chernyahovskogo";
+                   information.House = 58;
+                   information.Apartment = 72;
+                }
+                Console.WriteLine("Index: {0}", information.Index);
+                Console.WriteLine("City: {0}", information.City);
+                Console.WriteLine("Country: {0}", information.Country);
+                Console.WriteLine("Street: {0}", information.Street);
+                Console.WriteLine("House: {0}",information.House);
+                Console.WriteLine("Apartment: {0}",information.Apartment);
                 Console.ReadKey();
             }
         }
